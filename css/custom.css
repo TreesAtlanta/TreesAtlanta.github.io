@@ -180,7 +180,7 @@ input:focus, textarea:focus {
 }
 
 .bigHeader {
-  color: white;
+  color: #888888;
 }
 
 html {
@@ -218,6 +218,7 @@ html {
 .section-heading,
 .section-description {
   margin-bottom: 1.2rem;
+  color: #888888;
 }
 
 /* Hero
