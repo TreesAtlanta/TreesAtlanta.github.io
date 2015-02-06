@@ -1,7 +1,7 @@
 var fb = new Firebase("https://treesatlproject.firebaseio.com/");
 
-$('#passwordInput').keypress(function (e) {
-  if(e.keyCode == 13) {
+$('#loginButton').click(function (e) {
+  // if(e.keyCode == 13) {
     var username = $('#usernameInput').val();
     var password = $('#passwordInput').val();
     fb.createUser({
@@ -21,11 +21,12 @@ $('#passwordInput').keypress(function (e) {
         }
       } else {
         console.log('User account created!');
-        window.location('success.html');
+        // window.location('success.html');
       }
     });
-    // $('#usernameInput').val('');
-    // $('#passwordInput').val('');
-  }
+    $('#usernameInput').val('');
+    $('#passwordInput').val('');
+    // window.location.load('success.html');
+  // }
   return false;
 });
