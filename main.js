@@ -27,9 +27,6 @@ $('#loginButton').click(function (e) {
         // window.location('success.html');
       }
     });
-    $('#nameInput').val('');
-    $('#usernameInput').val('');
-    $('#passwordInput').val('');
     // window.location.load('success.html');
   // }
   return false;
