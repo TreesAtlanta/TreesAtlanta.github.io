@@ -14,7 +14,8 @@
         var mapOptions = {
           center: new google.maps.LatLng(33.7550, -84.3900),
           zoom: 10,
-          mapTypeId: google.maps.MapTypeId.ROADMAP
+          mapTypeId: google.maps.MapTypeId.TERRAIN
+          //ROADMAP gives a roadmap whereas TERRAIN gives a terrain map
         }
 
         var map = new google.maps.Map(mapCanvas, mapOptions);
@@ -40,8 +41,8 @@
           infowindow.open(map, treeMarker);
         });
 
-
       }
+
       google.maps.event.addDomListener(window, 'load', initialize);
     </script>
   </head>
