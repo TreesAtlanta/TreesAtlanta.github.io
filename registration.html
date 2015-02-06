@@ -32,37 +32,41 @@
 
 </head>
 <body>
-  <h2 class="bannerLogin">Register for Trees Atlanta</h2>
-<form>
+  <div class = "row">
+  <div class = "twelve columns">
+  </div>
+  </div>
+<!-- <form class = "formClass">
   <div class="row">
-    <div class="six columns">
+    <div class="twelve columns">
       <label for="exampleEmailInput">Your name</label>
       <input class="u-full-width" type="text" placeholder="John Doe" id="nameInput">
     </div>
   </div>
     <div class="row">
-    <div class="six columns">
+    <div class="twelve columns">
       <label for="exampleEmailInput">Your email</label>
       <input class="u-full-width" type="text" placeholder="example@domain.com" id="usernameInput">
     </div>
   </div>
   <div class="row">
-    <div class="six columns">
+    <div class="twelve columns">
       <label for="exampleEmailInput">Your password</label>
       <input class="u-full-width" type="password" placeholder="Password" id="passwordInput">
     </div>
   </div>
-<!--   <div class="row">
-    <div class="six columns">
-      <label for="exampleEmailInput">Confirm password</label>
-      <input class="u-full-width" type="password" placeholder="password" id="examplePasswordConfirmInput">
-    </div>
-  </div> -->
     <div class="six columns">
     </div>
-  </div>
   <button class="button-primary" id="loginButton">Register</button>
+</form> -->
+<form>
+    <h2 class="bannerLogin">Register</h2>
+    <input name="name" placeholder="What is your name?" id="nameInput" class="name" required />
+    <input placeholder="What is your email?" class="email" id="usernameInput" type="email" required />
+    <input placeholder="Make a password?" class="email" id="passwordInput" type="password" required />
+    <input name="submit" class="btn" id="loginButton" value="Register" />
 </form>
+
 <script type="text/javascript" src="main.js"></script>
 </body>
 

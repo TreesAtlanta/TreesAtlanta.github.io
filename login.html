@@ -37,14 +37,16 @@
 
   <body>
 
-  <h2 class="bannerLogin">Login to Trees Atlanta</h2>
     <form>
+    <h2 class="bannerLogin">Login</h2>
       <div class="row">
         <div class="six columns loginScreen">
-          <label for="exampleEmailInput">Your email</label>
-          <input class="u-full-width" type="text" placeholder="example@domain.com" id="usernameLoginInput">
+          <!-- <label for="exampleEmailInput">Your email</label> -->
+          <input placeholder="What is your email?" class="email" id="usernameLoginInput" type="email" required />
+          <input placeholder="What is your password?" class="email" type="password" id="passwordLoginInput" required />
+          <!-- <input class="u-full-width" type="text" placeholder="example@domain.com" id="usernameLoginInput">
           <label for="exampleEmailInput">Your password</label>
-          <input class="u-full-width" type="password" placeholder="************" id="passwordLoginInput">
+          <input class="u-full-width" type="password" placeholder="************" id="passwordLoginInput"> -->
         </div>
       </div>
       <button class="button-primary" id = "loginOfficialButton">Submit</button>
