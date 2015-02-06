@@ -4,6 +4,8 @@ $('#loginButton').click(function (e) {
   // if(e.keyCode == 13) {
     var username = $('#usernameInput').val();
     var password = $('#passwordInput').val();
+    var name = $('#nameInput').val();
+    fb.push({name: name});
     fb.createUser({
       email: username,
       password: password
@@ -21,10 +23,12 @@ $('#loginButton').click(function (e) {
         }
       } else {
         console.log('User account created!');
+        $('#success').value = name;
         window.location = "login.html";
         // window.location('success.html');
       }
     });
+    $('#nameInput').val('');
     $('#usernameInput').val('');
     $('#passwordInput').val('');
     // window.location.load('success.html');
