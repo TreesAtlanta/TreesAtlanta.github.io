@@ -21,6 +21,7 @@ $('#loginButton').click(function (e) {
         }
       } else {
         console.log('User account created!');
+        window.location = "login.html";
         // window.location('success.html');
       }
     });
