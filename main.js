@@ -44,6 +44,7 @@ $('#passwordLoginInput').keypress(function (e) {
         console.log('Login failed!', authData);
       } else {
         console.log('Login Successful!', authData);
+        window.location = "success.html";
       }
     });
     $('#loginInput').val('');
