@@ -1,0 +1,71 @@
+<html>
+  <head>
+    <style>
+      #map-canvas {
+        width: 1000px;
+        height: 800px;
+      }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script>
+
+      function initialize() {
+        var mapOptions = {
+          zoom: 12,
+          center: new google.maps.LatLng(33.7550, -84.3900)
+        }
+        var map = new google.maps.Map(document.getElementById('map-canvas'),
+                                      mapOptions);
+
+        setMarkers(map, trees);
+      }
+
+      /**
+       * Data for the markers consisting of a name, a LatLng and a zIndex for
+       * the order in which these markers should display on top of each
+       * other.
+       */
+      var trees = [
+        ['Tree 1', 33.7580, -84.3700],
+        ['Tree 2', 33.750, -84.3910],
+        ['Tree 3', 33.7630, -84.4000],
+        ['Tree 4', 33.7340, -84.3820],
+        ['Tree 5', 33.7250, -84.3610]
+      ];
+
+      function setMarkers(map, locations) {
+
+        var image = 'images/flagSmall.png';
+
+        var contentString;
+
+        for (var i = 0; i < locations.length; i++) {
+          var tree = locations[i];
+          var myLatLng = new google.maps.LatLng(tree[1], tree[2]);
+          var marker = new google.maps.Marker({
+              position: myLatLng,
+              map: map,
+              icon: image,
+          });
+
+          var infowindow = new google.maps.InfoWindow({
+            content: contentString
+          });
+
+          contentString = 'hi';
+
+          google.maps.event.addListener(marker, 'click', function() {
+            infowindow.open(map, marker);
+          });
+
+        }
+      }
+
+      google.maps.event.addDomListener(window, 'load', initialize);
+
+    </script>
+  </head>
+  <body>
+    <div id="map-canvas"></div>
+  </body>
+</html>

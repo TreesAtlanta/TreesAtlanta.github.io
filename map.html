@@ -14,7 +14,7 @@
         var mapOptions = {
           center: new google.maps.LatLng(33.7550, -84.3900),
           zoom: 10,
-          mapTypeId: google.maps.MapTypeId.TERRAIN
+          mapTypeId: google.maps.MapTypeId.ROADMAP
           //ROADMAP gives a roadmap whereas TERRAIN gives a terrain map
         }
 
@@ -33,6 +33,13 @@
         var myLatLng = new google.maps.LatLng(33.7550, -84.3900);
         var treeMarker = new google.maps.Marker({
           position: myLatLng,
+          map: map,
+          icon: image
+        });
+
+        var currPosition = new google.maps.Latlng(33.7560, -84.3910);
+        var currMarkeer = new google.maps.Marker({
+          position: currPosition,
           map: map,
           icon: image
         });
