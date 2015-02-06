@@ -31,8 +31,8 @@ $('#loginButton').click(function (e) {
   return false;
 });
 
-$('#loginOfficalButton').keypress(function (e) {
-  if (e.keyCode == 13) {
+$('#loginOfficalButton').click(function (e) {
+  // if (e.keyCode == 13) {
     var username = $('#usernameLoginInput').val();
     var password = $('#passwordLoginInput').val();
     fb.authWithPassword({
@@ -48,5 +48,5 @@ $('#loginOfficalButton').keypress(function (e) {
     );
     $('#loginInput').val('');
     $('#passInput').val('');
-  }
+  // }
 });
