@@ -1,6 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro);
 body {
-    background:#2d3b36 url(http://www.luismruiz.com/img/blured.jpg)no-repeat center center fixed;
+    /*background:#2d3b36 url(http://www.luismruiz.com/img/blured.jpg)no-repeat center center fixed;*/
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -179,7 +179,11 @@ input:focus, textarea:focus {
   margin-right: 50%;
 }
 
-body {
+.bigHeader {
+  color: white;
+}
+
+html {
   background-image: url("../images/background.jpg");
   background-attachment: fixed;
   background-size: 100%;
@@ -259,8 +263,8 @@ html {
 /* Categories
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .categories {
-  background-image: url('../images/values-bg.jpg');
-  background-size: cover;
+  /*background-image: url('../images/values-bg.jpg');*/
+  /*background-size: cover;*/
   color: #fff;
 }
 .categories .section-description { 
