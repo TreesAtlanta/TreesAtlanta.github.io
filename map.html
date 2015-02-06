@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <style>
+      #map-canvas {
+        width: 1000px;
+        height: 800px;
+      }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script>
+
+      function initialize() {
+        var mapCanvas = document.getElementById('map-canvas');
+        var mapOptions = {
+          center: new google.maps.LatLng(33.7550, -84.3900),
+          zoom: 10,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+
+        var map = new google.maps.Map(mapCanvas, mapOptions);
+
+        //<b></b> = to bold the letters
+        //<br> = to type on a new line 
+        var contentString = '<b>Tree</b><br>Information about Tree:' +
+          ' this is a beautiful tree';
+
+        var infowindow = new google.maps.InfoWindow({
+          content: contentString
+         });
+
+        var image = 'images/flagSmall.png';
+        var myLatLng = new google.maps.LatLng(33.7550, -84.3900);
+        var treeMarker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          icon: image
+        });
+
+        google.maps.event.addListener(treeMarker, 'click', function() {
+          infowindow.open(map, treeMarker);
+        });
+
+
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+  </head>
+  <body>
+    <div id="map-canvas"></div>
+  </body>
+</html>
