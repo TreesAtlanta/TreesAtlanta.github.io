@@ -1,5 +1,4 @@
-//BASE DEPENDENCIES
-var fb = new Firebase("https://helloworldjs.firebaseio.com/");
+var fb = new Firebase("https://treesatlproject.firebaseio.com/");
 
 $('#passwordInput').keypress(function (e) {
   if(e.keyCode == 13) {
@@ -24,12 +23,8 @@ $('#passwordInput').keypress(function (e) {
         console.log('User account created!');
       }
     });
-    $('#usernameInput').val('');
-    $('#passwordInput').val('');
+    // $('#usernameInput').val('');
+    // $('#passwordInput').val('');
   }
-});
-
-fb.on('child_added', function(snap) {
-  var message = snap.val();
-  displayChatMessage(message.name, message.message);
+  return false;
 });
