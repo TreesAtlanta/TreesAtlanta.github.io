@@ -5,8 +5,6 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
   <title>Trees Atlanta</title>
-  <meta name="description" content="">
-  <meta name="author" content="">
 
   <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -14,7 +12,7 @@
 
   <!-- FONT
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+  <!-- <link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'> -->
 
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -24,7 +22,9 @@
 
   <!-- Scripts
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src='https://cdn.firebase.com/js/client/2.0.4/firebase.js'></script>
+
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -37,32 +37,33 @@
   <div class="row">
     <div class="six columns">
       <label for="exampleEmailInput">Your name</label>
-      <input class="u-full-width" type="text" placeholder="John Doe" id="exampleNameInput">
+      <input class="u-full-width" type="text" placeholder="John Doe" id="nameInput">
     </div>
   </div>
     <div class="row">
     <div class="six columns">
       <label for="exampleEmailInput">Your email</label>
-      <input class="u-full-width" type="email" placeholder="example@domain.com" id="exampleEmailInput">
+      <input class="u-full-width" type="email" placeholder="example@domain.com" id="usernameInput">
     </div>
   </div>
   <div class="row">
     <div class="six columns">
       <label for="exampleEmailInput">Your password</label>
-      <input class="u-full-width" type="password" placeholder="password" id="examplePasswordInput">
+      <input class="u-full-width" type="password" placeholder="password" id="passwordInput">
     </div>
   </div>
-  <div class="row">
+<!--   <div class="row">
     <div class="six columns">
       <label for="exampleEmailInput">Confirm password</label>
       <input class="u-full-width" type="password" placeholder="password" id="examplePasswordConfirmInput">
     </div>
-  </div>
+  </div> -->
     <div class="six columns">
     </div>
   </div>
-  <input class="button-primary" type="submit" value="Register">
+  <button class="button-primary" id="loginButton">Register</button>
 </form>
+<script type="text/javascript" src="main.js"></script>
 </body>
 
 </html>
