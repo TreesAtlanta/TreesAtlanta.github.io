@@ -1,13 +1,11 @@
 //BASE DEPENDENCIES
-var fb = new Firebase("https://treesatlanta.firebaseio.com/");
+var fb = new Firebase("https://helloworldjs.firebaseio.com/");
 
 $('#passwordInput').keypress(function (e) {
   if(e.keyCode == 13) {
-  	var name = $('#nameInput').val()
-    var username = $('#emailInput').val();
+    var username = $('#usernameInput').val();
     var password = $('#passwordInput').val();
     fb.createUser({
-      name: name,
       email: username,
       password: password
     }, function(error) {
@@ -26,8 +24,12 @@ $('#passwordInput').keypress(function (e) {
         console.log('User account created!');
       }
     });
-    // $('#nameInput').val('');
-    // $('#usernameInput').val('');
-    // $('#passwordInput').val('');
+    $('#usernameInput').val('');
+    $('#passwordInput').val('');
   }
+});
+
+fb.on('child_added', function(snap) {
+  var message = snap.val();
+  displayChatMessage(message.name, message.message);
 });
