@@ -21,6 +21,7 @@ $('#passwordInput').keypress(function (e) {
         }
       } else {
         console.log('User account created!');
+        window.location('success.html');
       }
     });
     // $('#usernameInput').val('');
