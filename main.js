@@ -30,3 +30,23 @@ $('#loginButton').click(function (e) {
   // }
   return false;
 });
+
+$('#loginOfficalButton').keypress(function (e) {
+  if (e.keyCode == 13) {
+    var username = $('#usernameLoginInput').val();
+    var password = $('#passwordLoginInput').val();
+    fb.authWithPassword({
+      'email': username,
+      'password': password
+    }, function(error, authData) {
+      if (error) {
+        console.log('Login failed!', authData);
+      } else {
+        console.log('Login Successful!', authData);
+      }
+    }
+    );
+    $('#loginInput').val('');
+    $('#passInput').val('');
+  }
+});
