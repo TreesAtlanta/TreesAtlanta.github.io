@@ -48,7 +48,7 @@ $('#passwordLoginInput').keypress(function (e) {
       } else {
         console.log('Login Successful!', authData);
         // $('#success').value(username);
-        window.location = "http://treesatlproject.com/login.html";
+        window.location = "success.html";
       }
     });
     $('#loginInput').val('');
