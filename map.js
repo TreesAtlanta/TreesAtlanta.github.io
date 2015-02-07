@@ -8,18 +8,43 @@ $('#makeChangesButton').click(function (e) {
   date = getDate().toDateString();
 
   console.log(date);
+  if($('#cb0:checked').is(':checked')) {
+    mulch = getDate().toDateString();
+  } else {
+    mulch = null;
+  }
+  if($('#cb1:checked').is(':checked')) {
+    fertilize = getDate().toDateString();
+  } else {
+    fertilize = null;
+  }
+  if($('#cb2:checked').is(':checked')) {
+    insect = getDate().toDateString();
+  } else {
+    insect = null;
+  }
+  if($('#cb3:checked').is(':checked')) {
+    prune = getDate().toDateString();
+  } else {
+    prune = null;
+  }
+
   // if(e.keyCode == 13) {
     var status = $('#tStatus').val();
     var comments = $('#comments').val();
     fb.push({
-      longitude: longitude,
-      latitude: latitude,
-      date: date,
+      // longitude: longitude,
+      // latitude: latitude,
+      mulchDate: mulch,
+      fertilizeDate: fertilize,
+      insectideDate: insect,
+      pruneDate: prune,
       status: status,
       comments: comments
     });
     $('#tStatus').val('');
     $('#comments').val('');
+    window.load = "success.html";
   return false;
 });
 

@@ -13,6 +13,31 @@
   	<p id="comment"></p>
   	<p id="mulchDate"></p>
 
+  	<form class="formTemp">
+	    <h2 class="bannerLogin">Admin</h2>
+	    <!-- <h6 class="bannerLogin">Tasks Performed</h6> -->
+	    <input type="checkbox" id="cb0" class="graphic" />
+	    <label for="cb0">Mulch</label>
+	    <br/>
+	    <div class="spacing"></div>
+	    <input type="checkbox" id="cb1" class="graphic" />
+	    <label for="cb1">Fertlized</label>
+	    <br/>
+	    <div class="spacing"></div>
+	    <input type="checkbox" id="cb2" class="graphic" />
+	    <label for="cb2">Insectide</label>
+	    <br/>
+	    <div class="spacing"></div>
+	    <input type="checkbox" id="cb3" class="graphic" />
+	    <label for="cb3">Pruned</label>
+	    <div class="spacing"></div>
+
+	    <input placeholder="Tree Status" class="message" id="tStatus" type="email" required />
+	    <textarea rows="4" id="comments" cols="50" name="subject" placeholder="Please enter comments" class="message" required></textarea>
+	    <input name="submit" class="button" id="uploadButton" value="Upload Picture" />
+	    <input name="submit" class="button" id="makeChangesButton" value="Add Tree" />
+</form>
+
 
   	<script type="text/javascript">
   	var fb = new Firebase("https://treesatlproject.firebaseio.com/");
@@ -43,6 +68,6 @@
 
 
   	</script>
-  	<!-- // <script type="text/javascript" src="profile.js"></script> -->
+  	// <script type="text/javascript" src="map.js"></script>
   </body>
 </html>
