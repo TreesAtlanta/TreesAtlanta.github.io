@@ -13,12 +13,14 @@
   	<p id="comment"></p>
   	<p id="mulchDate"></p>
 
+
   	<script type="text/javascript">
   	var fb = new Firebase("https://treesatlproject.firebaseio.com/");
 
 		var x;
 		fb.on("child_added", function(snapshot) {
 		    x = snapshot.val();
+		    console.log(x);
 		    var cLatitude = x.cLatitude;
 		    var cLongitude = x.cLongitude;
 		    var treeStatus = x.treeStatus;

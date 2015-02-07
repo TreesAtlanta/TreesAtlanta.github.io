@@ -44,8 +44,12 @@ $('#passwordLoginInput').keypress(function (e) {
         console.log('Login failed!', authData);
       } else {
         console.log('Login Successful!', authData);
-        // $('#success').value(username);
-        window.location = "home.html";
+        if (username == "admin@admin.com") {
+        	console.log("Asdf");
+        	window.location = "admin.html";
+        } else {
+        	window.location = "home.html";
+        }
       }
     });
     $('#loginInput').val('');
