@@ -1,15 +1,10 @@
-<html>
-  <head>
-    <style>
-      #map-canvas {
-        width: 1000px;
-        height: 800px;
-      }
-    </style>
-    <script src="https://maps.googleapis.com/maps/api/js"></script>
-    <script>
+// var $$ = DOM7;
 
-      function initialize() {
+
+var width = screen.width;
+var height = screen.height;
+
+function initialize() {
         var mapOptions = {
           zoom: 12,
           center: new google.maps.LatLng(33.7550, -84.3900)
@@ -61,11 +56,6 @@
         }
       }
 
-      google.maps.event.addDomListener(window, 'load', initialize);
+      // google.maps.event.addDomListener(window, 'load', initialize);
 
-    </script>
-  </head>
-  <body>
-    <div id="map-canvas"></div>
-  </body>
-</html>
+      // -->################################map.html################################
