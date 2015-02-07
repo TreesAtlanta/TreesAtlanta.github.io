@@ -33,8 +33,8 @@ $('#makeChangesButton').click(function (e) {
     var status = $('#tStatus').val();
     var comments = $('#comments').val();
     fb.push({
-      // longitude: longitude,
-      // latitude: latitude,
+      longitude: longitude,
+      latitude: latitude,
       mulchDate: mulch,
       fertilizeDate: fertilize,
       insectideDate: insect,
