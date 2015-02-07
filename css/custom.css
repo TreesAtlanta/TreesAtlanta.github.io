@@ -13,7 +13,10 @@ form {
     margin-right:auto;
     width: 343px;
     height: 333px;
-    padding:30px;
+    padding-left: 60px;
+    padding-right: 0px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     border: 1px solid rgba(0,0,0,.2);
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
@@ -24,7 +27,7 @@ form {
     background: rgba(0, 0, 0, 0.5); 
     -moz-box-shadow: 0 0 13px 3px rgba(0,0,0,.5);
     -webkit-box-shadow: 0 0 13px 3px rgba(0,0,0,.5);
-    box-shadow: 0 0 13px 3px rgba(0,0,0,.5);
+    box-shadow: 0px 0px 13px 3px rgba(0,0,0,.5);
     overflow: hidden; 
 }
 
@@ -61,9 +64,9 @@ input {
     -webkit-background-clip: padding-box;
     background-clip: padding-box; 
     display:block;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-size:18px;
-    color:#fff;
+    color:#b7b7b7;
     padding-left:20px;
     padding-right:20px;
     margin-bottom:20px;
@@ -74,18 +77,21 @@ input[type=submit] {
 }
 
 input.name {
-    background: rgba(255, 255, 255, 0.4) url(http://luismruiz.com/img/gemicon_name.png) no-repeat scroll 16px 16px; 
-    padding-left:45px;
+    background: rgba(255, 255, 255, 0.4) /*url(http://luismruiz.com/img/gemicon_name.png)*/ no-repeat scroll 16px 16px; 
+    padding-left:10px;
+    opacity: .85;
 }
 
 input.email {
-    background: rgba(255, 255, 255, 0.4) url(http://luismruiz.com/img/gemicon_email.png) no-repeat scroll 16px 20px;
-    padding-left:45px;
+    background: rgba(255, 255, 255, 0.4) /*url(http://luismruiz.com/img/gemicon_email.png)*/ no-repeat scroll 16px 20px;
+    padding-left:10px;
+    opacity: .85;
 }
 
 input.message {
-    background: rgba(255, 255, 255, 0.4) url(http://luismruiz.com/img/gemicon_message.png) no-repeat scroll 16px 16px;
-    padding-left:45px;
+    background: rgba(255, 255, 255, 0.4) /*url(http://luismruiz.com/img/gemicon_message.png)*/ no-repeat scroll 16px 16px;
+    padding-left:10px;
+    opacity: .85;
 }
 
 ::-webkit-input-placeholder {
@@ -184,7 +190,9 @@ input:focus, textarea:focus {
 
 .bannerLogin {
   margin-right: 50%;
-  color: white;
+  color: #ffffff;
+  font-weight: 400;
+  text-shadow: 1px 1px 1px #000000;
 }
 
 .formClass {
@@ -202,6 +210,7 @@ input:focus, textarea:focus {
 
 .desc {
   color: white;
+  text-shadow: 1px 1px 1px #000000;
 }
 
 html {
@@ -227,12 +236,18 @@ html {
 /* Shared
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .button {
+  background-color: #197f2f;
   border-radius: 100px;
+  border-color: #ffffff;
+  color: #ffffff;
+  box-shadow: 2px 2px 2px #000000;
+  opacity: : 1.0;
 }
 
 .button1 {
-  background-color: #3399FF;
-  opacity: 0.7;
+  background-color: #197f2f;
+  color: #ffffff;
+  opacity: 0.9;
 }
 
 /* Sections
