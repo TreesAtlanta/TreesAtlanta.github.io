@@ -1,9 +1,5 @@
 // var $$ = DOM7;
 
-
-var width = screen.width;
-var height = screen.height;
-
 function initialize() {
         var mapOptions = {
           zoom: 12,
@@ -37,25 +33,25 @@ function initialize() {
         for (var i = 0; i < locations.length; i++) {
           var tree = locations[i];
           var myLatLng = new google.maps.LatLng(tree[1], tree[2]);
+          
           var marker = new google.maps.Marker({
               position: myLatLng,
               map: map,
               icon: image,
+              animation: google.maps.Animation.DROP
           });
 
-          var infowindow = new google.maps.InfoWindow({
-            content: contentString
-          });
+          contentString = "Hi";
 
-          contentString = 'hi';
-
-          google.maps.event.addListener(marker, 'click', function() {
-            infowindow.open(map, marker);
-          });
+          google.maps.event.addListener(marker, 'click', getInfoCallback(map, contentString));
 
         }
       }
 
-      // google.maps.event.addDomListener(window, 'load', initialize);
-
-      // -->################################map.html################################
+      function getInfoCallback(map, content) {
+          var infowindow = new google.maps.InfoWindow({content: content});
+          return function() {
+            infowindow.setContent(content); 
+            infowindow.open(map, this);
+        };
+      }
