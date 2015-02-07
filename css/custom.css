@@ -205,7 +205,7 @@ input:focus, textarea:focus {
 }
 
 html {
-  background-image: url("../images/darkstaticbackground.jpeg");
+  background-image: url("../images/medstaticbackground.jpeg");
   background-attachment: fixed;
   background-size: 100%;
 }
