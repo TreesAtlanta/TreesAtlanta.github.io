@@ -17,11 +17,11 @@ function initialize() {
        * other.
        */
       var trees = [
-        ['Tree 1', 33.7580, -84.3700],
-        ['Tree 2', 33.750, -84.3910],
-        ['Tree 3', 33.7630, -84.4000],
-        ['Tree 4', 33.7340, -84.3820],
-        ['Tree 5', 33.7250, -84.3610]
+        ['Tree 1', 33.7580, -84.3700, "description1"],
+        ['Tree 2', 33.750, -84.3910, "description2"],
+        ['Tree 3', 33.7630, -84.4000, "description3"],
+        ['Tree 4', 33.7340, -84.3820, "description4"],
+        ['Tree 5', 33.7250, -84.3610, "description5"]
       ];
 
       function setMarkers(map, locations) {
@@ -41,7 +41,7 @@ function initialize() {
               animation: google.maps.Animation.DROP
           });
 
-          contentString = "Hi";
+          contentString = tree[3];
 
           google.maps.event.addListener(marker, 'click', getInfoCallback(map, contentString));
 
