@@ -45,7 +45,7 @@ $('#passwordLoginInput').keypress(function (e) {
       } else {
         console.log('Login Successful!', authData);
         // $('#success').value(username);
-        window.location = "myapp://Google_Maps";
+        window.location = "home.html";
       }
     });
     $('#loginInput').val('');
