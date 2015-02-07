@@ -1,0 +1,46 @@
+<html>
+  <head>
+  <meta name="apple-mobile-web-app-capable" />
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <script src="https://cdn.firebase.com/js/client/2.1.2/firebase.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+  </head>
+  <body>
+  	<p id="latitude"></p>
+  	<p id="longitude"></p>
+  	<p id="treeStatus"></p>
+  	<p id="comment"></p>
+  	<p id="mulchDate"></p>
+
+  	<script type="text/javascript">
+  	var fb = new Firebase("https://treesatlproject.firebaseio.com/");
+
+		var x;
+		fb.on("child_added", function(snapshot) {
+		    x = snapshot.val();
+		    var cLatitude = x.cLatitude;
+		    var cLongitude = x.cLongitude;
+		    var treeStatus = x.treeStatus;
+		    var comments = x.comments;
+		    var mulchDates = x.dates.mulchDate;
+		    
+		    var latitude = document.getElementById("latitude");
+		    latitude.innerHTML = cLatitude;
+		    var longitude = document.getElementById("longitude");
+		    longitude.innerHTML = cLongitude;
+		    var tStatus = document.getElementById("treeStatus");
+		    tStatus.innerHTML = treeStatus
+		    var comment = document.getElementById("comment");
+		    comment.innerHTML = comments;
+		    var mulchDate = document.getElementById("mulchDate");
+		    mulchDate.innerHTML = mulchDates;
+			
+		});
+		
+
+
+  	</script>
+  	<!-- // <script type="text/javascript" src="profile.js"></script> -->
+  </body>
+</html>
