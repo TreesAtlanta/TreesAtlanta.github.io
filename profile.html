@@ -3,7 +3,7 @@
   <meta name="apple-mobile-web-app-capable" />
     <script src="https://maps.googleapis.com/maps/api/js"></script>
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
-    <script src="https://cdn.firebase.com/js/client/2.1.2/firebase.js"></script>
+    <!-- // <script src="https://cdn.firebase.com/js/client/2.1.2/firebase.js"></script> -->
     <link rel="stylesheet" type="text/css" href="css/custom.css">
   </head>
   <body>
@@ -18,7 +18,7 @@
   	<form class="formTemp">
 	    <h2 class="bannerLogin">Admin</h2>
 	    <!-- <h6 class="bannerLogin">Tasks Performed</h6> -->
-	    <input type="checkbox" id="cb0" class="graphic" />
+	    <!-- <input type="checkbox" id="cb0" class="graphic" />
 	    <label for="cb0">Mulch</label>
 	    <br/>
 	    <div class="spacing"></div>
@@ -35,87 +35,18 @@
 	    <div class="spacing"></div>
 
 	    <input placeholder="Tree Status" class="message" id="tStatus" type="email" required />
-	    <textarea rows="4" id="comments" cols="50" name="subject" placeholder="Please enter comments" class="message" required></textarea>
-	    <input name="submit" class="button" id="uploadButton" value="Upload Picture" />
-	    <input name="submit" class="button" id="makeChangesButton" value="Add Tree" />
+	    <textarea rows="4" id="comments" cols="50" name="subject" placeholder="Please enter comments" class="message" required></textarea> -->
+	    <input name="submit" class="button" value="Get Directions" id="getDirectionsButton" />
+
 </form>
 
 
   	<script type="text/javascript">
-  	var fb = new Firebase("https://treesatlproject.firebaseio.com/");
-
-		var x;
-		fb.on("child_added", function(snapshot) {
-		    x = snapshot.val();
-		    console.log(x);
-		    var cLatitude = x.cLatitude;
-		    var cLongitude = x.cLongitude;
-		    //var treeStatus = x.treeStatus;
-		    //var comments = x.comments;
-		    //var mulchDates = x.dates.mulchDate;
-
-
-		    //parse the dates
-		    function parseDate(str) {
-		    	var mdy = str.split('/');
-		    	return new Date(mdy[2], mdy[0] - 1, mdy[1]);
-		    }
-
-		    //gets the difference in days between two dates
-		    //second date should be the current time
-		    function dayDiff(first, second) {
-		    	return (second - first)/(1000 * 60 * 60 * 24)|0;
-		    }
-
-		    //threshold variable is the difference in days for when this task eneds to be done
-		    //example: every 90 days, -> threshold = 90
-		    //returns a string of whether mulch is needed or not needed for x days
-		    function needMulch(mulchDate) {
-		    	var threshold = 365;
-		    	var currentTime = new Date();
-		    	mulchDate = parseDate(mulchDate);
-
-		    	return dayDiff(mulchDate, currentTime) > threshold;
-		    }
-
-		    function needMulchWhen(mulchDate) {
-		    	threshold = 365;
-		    	var currentTime = new Date();
-		    	mulchDate = parseDate(mulchDate);
-		    	if (needMulch(mulchDate)) {
-		    		return 'This tree needs mulching';
-		    	} else {
-		    		return 'This tree does not need mulching for ' + (dayDiff(mulchDate, currentTime)) + ' days';
-		    	}
-		    }
-
-		    var exampleDate = '02/06/2015'
-		    var timeDiffMulch = needMulchWhen(exampleDate);
-		    
-
-		    //sets the value form the database to a new variable
-		    // var latitude = document.getElementById("latitude");
-		    // latitude.innerHTML = cLatitude;
-		    // var longitude = document.getElementById("longitude");
-		    // longitude.innerHTML = cLongitude;
-		    // var tStatus = document.getElementById("treeStatus");
-		    // tStatus.innerHTML = treeStatus
-		    // var comment = document.getElementById("comment");
-		    // comment.innerHTML = comments;
-		    // var mulchDate = document.getElementById("mulchDate");
-		    // mulchDate.innerHTML = mulchDates;
-
-		    //currDate.innerHTML = currentTime;
-
-		    dateDifference.innerHTML = timeDiffMulch;
-		    currDate.innerHTML = difference;
-
-			
-		});
+  	
 		
 
 
   	</script>
-  	// <script type="text/javascript" src="map.js"></script>
+  	// <script type="text/javascript" src="profile.js"></script>
   </body>
 </html>

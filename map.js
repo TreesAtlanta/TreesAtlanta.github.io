@@ -1,6 +1,10 @@
 // var $$ = DOM7;
 var fb = new Firebase("https://treesatlproject.firebaseio.com/");
 
+
+/*****************************************************/
+//                  ADMINISTRATOR JS             
+/*****************************************************/
 var longitude;
 var latitude;
 
@@ -61,6 +65,39 @@ function getLocation() {
   }
 }
 
+$('#uploadButton').click(function (e) {
+  previewFile();
+});
+
+function previewFile(){
+    var preview = document.querySelector('img');
+    var file    = document.querySelector('input[type=file]').files[0];
+    var reader  = new FileReader();
+
+    reader.onloadend = function () {
+        preview.src = reader.result;
+    }
+
+    if (file) {
+        reader.readAsDataURL(file);
+    } else {
+        preview.src = "";
+    }
+}
+
+/*****************************************************/
+//              END ADMINISTRATOR JS             
+/*****************************************************/
+
+
+
+
+
+
+
+/*****************************************************/
+//                     MAP JS             
+/*****************************************************/
 function setPosition(position) {
   latitude = position.coords.latitude;
   longitude = position.coords.longitude;
@@ -135,3 +172,7 @@ function initialize() {
             infowindow.open(map, this);
         };
       }
+
+/*****************************************************/
+//                 END MAP JS             
+/*****************************************************/
