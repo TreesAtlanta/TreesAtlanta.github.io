@@ -31,6 +31,10 @@ form {
     overflow: hidden; 
 }
 
+.formTemp {
+  height: 500px;
+}
+
 textarea{
     background: rgba(255, 255, 255, 0.4) url(http://luismruiz.com/img/gemicon_message.png) no-repeat scroll 16px 16px; 
     width: 276px;

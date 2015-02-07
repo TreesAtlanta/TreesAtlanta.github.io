@@ -1,5 +1,13 @@
 var fb = new Firebase("https://treesatlproject.firebaseio.com/");
 
+$(".dropdown .title").click(function () {
+  $(this).parent().toggleClass("closed");
+});
+
+$(".dropdown li").click(function () {
+  $(this).parent().parent().toggleClass("closed").find(".title").text($(this).text());
+});
+
 $('#loginButton').click(function (e) {
   // if(e.keyCode == 13) {
     var username = $('#usernameInput').val();
@@ -45,7 +53,6 @@ $('#passwordLoginInput').keypress(function (e) {
       } else {
         console.log('Login Successful!', authData);
         if (username == "admin@admin.com") {
-        	console.log("Asdf");
         	window.location = "admin.html";
         } else {
         	window.location = "home.html";
