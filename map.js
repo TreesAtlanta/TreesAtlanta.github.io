@@ -1,6 +1,48 @@
 // var $$ = DOM7;
 var fb = new Firebase("https://treesatlproject.firebaseio.com/");
 
+var longitude;
+var latitude;
+
+$('#makeChangesButton').click(function (e) {
+  date = getDate().toDateString();
+
+  console.log(date);
+  // if(e.keyCode == 13) {
+    var status = $('#tStatus').val();
+    var comments = $('#comments').val();
+    fb.push({
+      longitude: longitude,
+      latitude: latitude,
+      date: date,
+      status: status,
+      comments: comments
+    });
+    $('#tStatus').val('');
+    $('#comments').val('');
+  return false;
+});
+
+function getDate() {
+  return new Date();
+}
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(setPosition);
+  } else {
+    console.log("geolocation is not supported by this browser")
+    window.load = "Error.html"
+  }
+}
+
+function setPosition(position) {
+  latitude = position.coords.latitude;
+  longitude = position.coords.longitude;
+}
+
+
+
 function initialize() {
         var mapOptions = {
           zoom: 12,
@@ -8,41 +50,8 @@ function initialize() {
         }
         var map = new google.maps.Map(document.getElementById('map-canvas'),
                                       mapOptions);
-
-              fb.push({
-                cLatitude: "33.5230",
-                cLongitude: "-84.3700",
-                treeStatus: "Maintanence needed",
-                comments: "Needs watering",
-                dates: {
-                  mulchDate: "01/01/01",
-                  pruneDate: "03/12/07",
-                  fertilizedDate: "12/14/12",
-                  insectideDate: "09/12/13"
-                }
-             });
-
-              fb.push({
-                cLatitude: "33.5190",
-                cLongitude: "-84.3700",
-                treeStatus: "Good",
-                comments: "Needs mulch",
-                dates: {
-                  mulchDate: "01/01/10",
-                  pruneDate: "03/12/23",
-                  fertilizedDate: "12/14/90",
-                  insectideDate: "09/12/89"
-                }
-             });
-
         setMarkers(map, trees);
       }
-
-      /**
-       * Data for the markers consisting of a name, a LatLng and a zIndex for
-       * the order in which these markers should display on top of each
-       * other.
-       */
 
       var trees = [
         ['Tree 1', 33.7580, -84.3700, "description1"],

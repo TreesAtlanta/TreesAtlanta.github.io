@@ -35,22 +35,23 @@
 
 </head>
   
-<body>
+<body onload ="getLocation()">
 
 <form class="formTemp">
     <h2 class="bannerLogin">Admin</h2>
-    <input type="email" placeholder="Address" id="latitutde" class="name" required />
-    <input placeholder="Fertilize Date" class="email" id="fDate" type="email" required />
+ <!--    <input placeholder="Fertilize Date" class="email" id="fDate" type="email" required />
     <input placeholder="Insectide Date" class="message" id="iDate" type="email" required />
     <input placeholder="Mulch Date" class="message" id="mDate" type="email" required />
-    <input placeholder="Prune Date" class="message" id="pDate" type="email" required />
+    <input placeholder="Prune Date" class="message" id="pDate" type="email" required /> -->
     <input placeholder="Tree Status" class="message" id="tStatus" type="email" required />
-    <input placeholder="Comments" class="message" id="comments" type="email" required />
-
+    <textarea rows="4" id="comments" cols="50" name="subject" placeholder="Please enter comments" class="message" required></textarea>
+    <input name="submit" class="button" id="uploadButton" value="Upload Picture" />
     <input name="submit" class="button" id="makeChangesButton" value="Add Tree" />
+
+
 </form>
 
-<script type="text/javascript" src="main.js"></script>
+<script type="text/javascript" src="map.js"></script>
 
 </body>
 </html>
