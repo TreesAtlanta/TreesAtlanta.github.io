@@ -50,6 +50,7 @@ $('#passwordLoginInput').keypress(function (e) {
     }, function(error, authData) {
       if (error) {
         console.log('Login failed!', authData);
+        $('#failedLogin').val("Login Failed");
       } else {
         console.log('Login Successful!', authData);
         if (username == "admin@admin.com") {
