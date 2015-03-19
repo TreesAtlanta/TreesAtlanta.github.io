@@ -1,8 +1,8 @@
-# ruby-getting-started
+# Trees Atlanta
 
-A barebones Rails app, which can easily be deployed to Heroku.
+A barebones app used to track tree maintanence in Atlanta.
 
-This application support the [Getting Started with Ruby on Heroku](https://devcenter.heroku.com/articles/getting-started-with-ruby) article - check it out.
+This application support the (http://treesatlproject.me) - check it out.
 
 ## Running Locally
 
@@ -29,7 +29,10 @@ $ heroku open
 
 ## Documentation
 
-For more information about using Ruby on Heroku, see these Dev Center articles:
+For more information about using Trees Atlanta: http://docs.treesatlanta.apiary.io/#
 
 - [Ruby on Heroku](https://devcenter.heroku.com/categories/ruby)
+
+
+EDIT (03/08/2015) - Rails/Heroku no longer supported.
 
